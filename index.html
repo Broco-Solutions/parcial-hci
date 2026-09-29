@@ -159,7 +159,7 @@ footer{text-align:center;padding-top:32px;font-size:.8125rem;color:var(--muted)}
       <p class="subkicker">Facultad de Ciencias Económicas — Rosario · LGND</p>
       <h1>Primer Parcial</h1>
       <p class="subtitle">Fundamentos de Interacción</p>
-      <p class="meta">Unidades 1, 2 y 3 · 8 de mayo de 2026</p>
+      <p class="meta">Unidades 1, 2 y 3 · 29 de septiembre de 2026</p>
     </header>
 
     <div class="login-card">
@@ -184,7 +184,7 @@ footer{text-align:center;padding-top:32px;font-size:.8125rem;color:var(--muted)}
 
     <footer>
       Ing. Boglione Franco · Ing. Coirini Renzo<br>
-      Lic. en Gestión de Negocios Digitales · 4° año · 1er semestre 2026
+      Lic. en Gestión de Negocios Digitales · 4° año · 2026
     </footer>
   </div>
 </section>
@@ -285,54 +285,43 @@ footer{text-align:center;padding-top:32px;font-size:.8125rem;color:var(--muted)}
 
 // URL del Web App de Google Apps Script.
 // Pegar acá la URL que termina en /exec luego de hacer "Implementar como aplicación web".
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwEAiIMXg6zBPPlRyw-iHRAt-nYnlY4Qynx_njF2h8bSeXCOUZprAh-qPUILHRaJ26P/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/REEMPLAZAR_NUEVO_DEPLOY/exec";
 
-// Listado de alumnos (44).
+// Listado de alumnos (33) — cohorte 29/09/2026.
 const STUDENTS = [
-  "Acuña, Martina",
-  "Aliau, Guadalupe Dominga",
-  "Bainstein, Martina Morena",
-  "Bergonzi, Maximo",
-  "Bertolotto, Ramiro Alejo",
-  "Brassesco, Santiago Nicolas",
-  "Bufarini Bella, Ernesto",
-  "Campos, Luciano Leonel",
-  "Catgenova, Bautista",
-  "Cavacini, Juan",
-  "Corubolo, Teo",
-  "De La Mata, Lucia",
-  "Dileo, Maximo",
-  "Duque Victorica, Juan Ignacio",
-  "Figueroa Casas, Julia",
-  "Katz, Valentin",
-  "Kovacevich, Marko",
-  "Kovacevich, Mateo",
-  "Laboranti, Marco",
-  "Leoni, Valentin",
-  "Llacer, Tiago Ariel",
-  "Lopez, Joaquin",
-  "Marinozzi, Maximo Ebel",
-  "Martino, Juan Bautista",
-  "Moretti, Martina",
-  "Nielsen, Santiago Nicolas",
-  "Ojeda, Jimena Lourdes",
-  "Pochettino, Maia",
-  "Pozo, Felipe Manuel",
-  "Riso, Maximo",
-  "Rodriguez, Nazarena",
-  "Ruiz, Juan Francisco",
-  "Saita, Alejo Matias",
-  "Schillagi Bronzini, Tomás",
-  "Serra, Alma",
-  "Silveira, Malena",
-  "Sodini, Tobias",
-  "Spadoni, Joaquin",
-  "Spallanzani, Gianluca",
-  "Testa, Santino",
-  "Tome, Ciro",
-  "Tortosa, Nicolas",
-  "Wenk, Molly",
-  "Zimmermann, Lucas"
+  "ACOSTA, FRANCISCO",
+  "BRUN, FAUSTO LUIS",
+  "CABALLERO, RODRIGO",
+  "CASTELLI, MARTIN",
+  "CHIAVASSA, MARTINO MANUEL",
+  "DOMINGUEZ, MALENA",
+  "FALCHI, MARTINA",
+  "FANTONI, PILAR",
+  "FERRO, MORA",
+  "GALFRE, FRANCISCO",
+  "GARCIA, FEDERICO",
+  "GIULIANI, MATEO",
+  "GOMEZ, PAULA",
+  "GONZALEZ, JULIAN",
+  "GROZ, LUCIA",
+  "GUERRA, LUCIANO",
+  "HEREDIA, MARTINA",
+  "LOPEZ MARTINEZ, JULIETA",
+  "MARTIN, AUGUSTO",
+  "MARTINEZ, JUAN",
+  "MATURANO, SANTIAGO",
+  "MENDOZA, JUAN",
+  "MORALES, SANTIAGO",
+  "MORON, JULIAN",
+  "PARRA, JOSEFINA",
+  "PERALTA, FRANCISCO",
+  "RODRIGUEZ, MATEO",
+  "ROMERO, JUAN IGNACIO",
+  "RUIZ DIAZ, SANTIAGO",
+  "SOSA, MARTIN",
+  "SUAREZ, TOMAS",
+  "TISSERA, JUAN",
+  "VILLALBA, SANTIAGO"
 ];
 
 // ============================================================
@@ -341,259 +330,501 @@ const STUDENTS = [
 
 const QUESTIONS = [
   {
-    id: 1, unit: "Unidad 1", title: "UX y UI",
-    statement: "Respecto a la diferencia entre UX (User Experience) y UI (User Interface), seleccioná la o las afirmaciones correctas.",
-    options: [
-      { letter: "A", text: "UX se relaciona con la experiencia completa que vive una persona al usar un producto, servicio o sistema." },
-      { letter: "B", text: "UI incluye elementos visibles e interactivos como botones, menús, formularios, colores, íconos y tipografías." },
-      { letter: "C", text: "UX puede considerar expectativas, emociones, contexto de uso, fricciones y satisfacción del usuario." },
-      { letter: "D", text: "UI también puede analizar la claridad visual de los componentes con los que interactúa el usuario." }
+    "id": 1,
+    "unit": "Unidad 1",
+    "title": "Usabilidad y contexto de uso",
+    "statement": "Sobre el concepto de usabilidad, seleccioná la o las afirmaciones correctas.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "La usabilidad considera la efectividad, la eficiencia y la satisfacción con que usuarios concretos alcanzan objetivos en un contexto de uso."
+      },
+      {
+        "letter": "B",
+        "text": "Una interfaz es usable si se ve moderna y atractiva, aunque los usuarios no puedan completar sus tareas con claridad."
+      },
+      {
+        "letter": "C",
+        "text": "La usabilidad puede evaluarse desde etapas tempranas mediante prototipos y pruebas con usuarios, sin esperar a que el producto esté en producción."
+      },
+      {
+        "letter": "D",
+        "text": "La usabilidad depende únicamente de la cantidad de funcionalidades disponibles en el sistema."
+      }
     ]
   },
   {
-    id: 2, unit: "Unidad 1", title: "Definición de usabilidad",
-    statement: "¿Cuál de las siguientes opciones describe mejor el concepto de usabilidad?",
-    options: [
-      { letter: "A", text: "La capacidad de un sistema para ser usado de manera efectiva, eficiente y satisfactoria por usuarios específicos en un contexto determinado." },
-      { letter: "B", text: "La cantidad de funciones avanzadas que tiene una aplicación." },
-      { letter: "C", text: "El nivel de complejidad técnica del sistema." },
-      { letter: "D", text: "La calidad estética de una interfaz, independientemente de si el usuario puede cumplir su objetivo." }
+    "id": 2,
+    "unit": "Unidad 1",
+    "title": "Modelos mentales y affordance",
+    "statement": "Respecto de los modelos mentales y las affordances, seleccioná la o las afirmaciones correctas.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Las convenciones conocidas y los modelos mentales previos pueden ayudar a que una persona anticipe cómo funciona una interfaz."
+      },
+      {
+        "letter": "B",
+        "text": "En diseño de interacción, affordance se refiere a la rentabilidad económica que puede generar una funcionalidad."
+      },
+      {
+        "letter": "C",
+        "text": "La forma, la ubicación, las etiquetas y otras señales visuales pueden sugerir qué acciones son posibles sobre un elemento."
+      },
+      {
+        "letter": "D",
+        "text": "Si una interfaz usa animaciones llamativas, la arquitectura de información y la claridad de las acciones dejan de ser relevantes."
+      }
     ]
   },
   {
-    id: 3, unit: "Unidad 1", title: "Affordance",
-    statement: "Seleccioná la o las afirmaciones correctas sobre el concepto de affordance.",
-    options: [
-      { letter: "A", text: "Una affordance ayuda a que el usuario intuya qué acción puede realizar con un objeto o elemento de interfaz." },
-      { letter: "B", text: "Un botón con apariencia presionable puede comunicar que es posible hacer clic o tocarlo." },
-      { letter: "C", text: "Una affordance puede estar presente tanto en objetos físicos como en interfaces digitales." },
-      { letter: "D", text: "Una manija de puerta puede sugerir si debe empujarse o tirarse." }
+    "id": 3,
+    "unit": "Unidad 1",
+    "title": "Feedback y prevención de errores",
+    "statement": "Sobre feedback y prevención de errores en una interfaz, seleccioná la o las afirmaciones correctas.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Ante un fallo, mostrar únicamente un código técnico como “Error 504” suele ser suficiente para que cualquier usuario sepa cómo continuar."
+      },
+      {
+        "letter": "B",
+        "text": "Después de una acción que tarda, un indicador de progreso o estado ayuda a comunicar que el sistema recibió la operación y sigue trabajando."
+      },
+      {
+        "letter": "C",
+        "text": "Para no interrumpir al usuario, una acción destructiva importante debería ejecutarse siempre sin confirmación ni posibilidad de revisión."
+      },
+      {
+        "letter": "D",
+        "text": "Validaciones, restricciones y mensajes oportunos pueden evitar que el usuario cometa ciertos errores antes de enviar una acción."
+      }
     ]
   },
   {
-    id: 4, unit: "Unidad 1", title: "Feedback en una interfaz",
-    statement: "Sobre el concepto de feedback en una interfaz, seleccioná la o las opciones correctas.",
-    options: [
-      { letter: "A", text: "El feedback ayuda a que el usuario entienda si una acción fue recibida, procesada, rechazada o completada." },
-      { letter: "B", text: "Un mensaje de error claro puede ser una forma válida de feedback." },
-      { letter: "C", text: "Una barra de carga durante una operación larga puede mejorar la percepción de control del usuario." },
-      { letter: "D", text: "Una confirmación luego de enviar un formulario ayuda a reducir la incertidumbre del usuario." }
+    "id": 4,
+    "unit": "Unidad 1",
+    "title": "Consistencia y estándares",
+    "statement": "Seleccioná la o las afirmaciones correctas sobre consistencia y estándares en interfaces.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Usar la misma etiqueta para una misma acción en distintas pantallas favorece la consistencia y reduce ambigüedad."
+      },
+      {
+        "letter": "B",
+        "text": "Cambiar deliberadamente la ubicación de los controles principales en cada pantalla ayuda a que los usuarios presten más atención y aprendan más rápido."
+      },
+      {
+        "letter": "C",
+        "text": "Respetar convenciones conocidas de la plataforma puede reducir la necesidad de aprendizaje."
+      },
+      {
+        "letter": "D",
+        "text": "Una interfaz consistente puede disminuir la carga cognitiva porque el usuario reutiliza patrones ya aprendidos."
+      }
     ]
   },
   {
-    id: 5, unit: "Unidad 1", title: "Heurísticas de Nielsen",
-    statement: "Seleccioná la o las afirmaciones correctas sobre las heurísticas de Nielsen.",
-    options: [
-      { letter: "A", text: "Son principios generales utilizados para evaluar la usabilidad de una interfaz." },
-      { letter: "B", text: "Son métricas financieras para calcular el retorno de inversión de una interfaz." },
-      { letter: "C", text: "Son instrucciones técnicas obligatorias para programar el backend de una aplicación." },
-      { letter: "D", text: "Son normas de diseño gráfico que solo aplican a la elección de colores y tipografías." }
+    "id": 5,
+    "unit": "Unidad 1",
+    "title": "Diseño centrado en el usuario",
+    "statement": "¿Cuáles de las siguientes prácticas son compatibles con un enfoque de diseño centrado en el usuario?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Investigar objetivos, necesidades, capacidades y contexto de uso de las personas."
+      },
+      {
+        "letter": "B",
+        "text": "Prototipar alternativas antes de invertir en una implementación completa."
+      },
+      {
+        "letter": "C",
+        "text": "Probar soluciones con usuarios, aprender de los resultados e iterar."
+      },
+      {
+        "letter": "D",
+        "text": "Equilibrar necesidades de usuario con restricciones técnicas y objetivos del negocio, sin asumir que una sola dimensión decide todo."
+      }
     ]
   },
   {
-    id: 6, unit: "Unidad 1", title: "Diseño centrado en el usuario",
-    statement: "¿Cuáles de las siguientes afirmaciones sobre diseño centrado en el usuario son correctas?",
-    options: [
-      { letter: "A", text: "Busca comprender necesidades, objetivos, contexto y limitaciones de los usuarios." },
-      { letter: "B", text: "Se basa únicamente en aplicar tendencias visuales modernas." },
-      { letter: "C", text: "Puede incluir entrevistas, observación, prototipos, pruebas y validación." },
-      { letter: "D", text: "Implica aceptar literalmente todo lo que el usuario pide, sin análisis del diseñador o del equipo." }
+    "id": 6,
+    "unit": "Unidad 1",
+    "title": "Ética y dark patterns",
+    "statement": "¿Cuál de las siguientes decisiones constituye por sí sola un dark pattern? Seleccioná todas las que correspondan.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Solicitar consentimiento explícito para una opción no esencial y permitir revocarlo luego desde un lugar accesible."
+      },
+      {
+        "letter": "B",
+        "text": "Mostrar el precio final y los cargos antes de que el usuario confirme una compra."
+      },
+      {
+        "letter": "C",
+        "text": "Ofrecer un proceso de cancelación claro y de dificultad comparable al proceso de alta."
+      },
+      {
+        "letter": "D",
+        "text": "Dejar desmarcada por defecto una suscripción opcional a comunicaciones comerciales."
+      }
     ]
   },
   {
-    id: 7, unit: "Unidad 2", title: "Roles en un proyecto SAFe",
-    statement: "Sobre los roles en un proyecto que aplica SAFe (Scaled Agile Framework), seleccioná la o las afirmaciones correctas.",
-    options: [
-      { letter: "A", text: "El Scrum Master facilita las reuniones del equipo y ayuda a remover bloqueos." },
-      { letter: "B", text: "En SAFe los desarrolladores y testers no integran ningún equipo definido." },
-      { letter: "C", text: "El RTE (Release Train Engineer) opera principalmente a nivel de equipo individual, no a nivel de programa." },
-      { letter: "D", text: "El Product Manager y el System Architect trabajan a nivel de programa coordinando varios equipos." }
+    "id": 7,
+    "unit": "Unidad 2",
+    "title": "Scrum",
+    "statement": "Sobre Scrum, seleccioná la o las afirmaciones correctas.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "El Product Backlog contiene trabajo ordenado que puede evolucionar a medida que se aprende sobre el producto."
+      },
+      {
+        "letter": "B",
+        "text": "El Scrum Master es quien decide unilateralmente las prioridades de producto y asigna cada tarea a cada integrante."
+      },
+      {
+        "letter": "C",
+        "text": "El Sprint es un período timeboxed dentro del cual se trabaja para alcanzar un Sprint Goal y producir un incremento útil."
+      },
+      {
+        "letter": "D",
+        "text": "La Sprint Review es una reunión exclusivamente interna del equipo técnico y no contempla interacción con stakeholders relevantes."
+      }
     ]
   },
   {
-    id: 8, unit: "Unidad 2", title: "Rol de la tecnología en un proyecto",
-    statement: "Sobre el rol de la tecnología en un proyecto informático, seleccioná la o las afirmaciones correctas.",
-    options: [
-      { letter: "A", text: "La tecnología debe estar alineada con el problema, el usuario, el contexto y los objetivos del negocio." },
-      { letter: "B", text: "La mejor tecnología siempre es la más nueva, aunque el equipo no la conozca y el usuario no la necesite." },
-      { letter: "C", text: "Una mala decisión tecnológica puede afectar costos, tiempos, mantenimiento, escalabilidad y experiencia de usuario." },
-      { letter: "D", text: "La tecnología no tiene impacto en la experiencia del usuario, porque solo afecta al backend." }
+    "id": 8,
+    "unit": "Unidad 2",
+    "title": "Kanban y WIP",
+    "statement": "Sobre Kanban y el manejo de WIP (Work In Progress), seleccioná la o las afirmaciones correctas.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Kanban puede hacer visible el flujo de trabajo y el estado de los ítems."
+      },
+      {
+        "letter": "B",
+        "text": "Limitar el WIP puede ayudar a reducir sobrecarga y a exponer cuellos de botella."
+      },
+      {
+        "letter": "C",
+        "text": "Kanban obliga a organizar el trabajo en sprints de duración fija."
+      },
+      {
+        "letter": "D",
+        "text": "Un sistema pull busca iniciar nuevo trabajo cuando existe capacidad disponible, en lugar de acumular tareas abiertas sin límite."
+      }
     ]
   },
   {
-    id: 9, unit: "Unidad 2", title: "Niveles de SAFe",
-    statement: "Sobre los niveles que propone SAFe (Scaled Agile Framework), seleccioná la o las afirmaciones correctas.",
-    options: [
-      { letter: "A", text: "El nivel Team agrupa a los equipos que ejecutan el trabajo, generalmente con prácticas de Scrum o Kanban." },
-      { letter: "B", text: "El nivel Program (ART — Agile Release Train) sincroniza el trabajo de varios equipos hacia objetivos comunes." },
-      { letter: "C", text: "El nivel Portfolio se enfoca exclusivamente en la programación técnica del producto." },
-      { letter: "D", text: "SAFe propone un único nivel jerárquico, sin diferenciar equipos, programas y portfolio." }
+    "id": 9,
+    "unit": "Unidad 2",
+    "title": "SAFe y coordinación",
+    "statement": "Sobre SAFe y la coordinación de trabajo a escala, seleccioná la o las afirmaciones correctas.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "El Release Train Engineer facilita la coordinación y el funcionamiento del Agile Release Train (ART)."
+      },
+      {
+        "letter": "B",
+        "text": "El RTE funciona principalmente como jefe directo que asigna tareas individuales a cada desarrollador del ART."
+      },
+      {
+        "letter": "C",
+        "text": "El nivel Portfolio se limita a decidir detalles de programación y no se relaciona con estrategia ni inversión."
+      },
+      {
+        "letter": "D",
+        "text": "El nivel Portfolio ayuda a conectar estrategia e inversión con la ejecución de iniciativas y flujos de valor."
+      }
     ]
   },
   {
-    id: 10, unit: "Unidad 2", title: "Cuándo aplicar cada framework ágil",
-    statement: "¿En qué situación tiene más sentido aplicar SAFe en lugar de Scrum, Kanban o LeSS?",
-    options: [
-      { letter: "A", text: "Una startup de 5 personas que recién está validando su primer producto." },
-      { letter: "B", text: "Un equipo de soporte técnico con flujo continuo de tickets." },
-      { letter: "C", text: "Una empresa grande con muchos equipos que trabajan sobre productos distintos pero deben estar alineados a una estrategia común." },
-      { letter: "D", text: "Un único equipo Scrum trabajando en un producto pequeño y bien acotado." }
+    "id": 10,
+    "unit": "Unidad 2",
+    "title": "Elección de framework",
+    "statement": "Relacioná contexto y enfoque de trabajo. Seleccioná la o las asociaciones razonables.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Scrum puede ser adecuado para un equipo único que desarrolla un producto de forma iterativa con objetivos de Sprint."
+      },
+      {
+        "letter": "B",
+        "text": "Kanban puede ser adecuado para soporte o mantenimiento con flujo continuo y prioridades cambiantes."
+      },
+      {
+        "letter": "C",
+        "text": "LeSS puede utilizarse cuando varios equipos Scrum trabajan coordinadamente sobre un mismo producto."
+      },
+      {
+        "letter": "D",
+        "text": "SAFe puede ser considerado en organizaciones grandes que necesitan coordinar múltiples equipos o trenes y alinear ejecución con estrategia."
+      }
     ]
   },
   {
-    id: 11, unit: "Unidad 2", title: "Kanban",
-    statement: "¿Cuáles de las siguientes afirmaciones sobre Kanban son correctas?",
-    options: [
-      { letter: "A", text: "Permite visualizar el flujo de trabajo." },
-      { letter: "B", text: "Puede utilizar límites de WIP (Work In Progress) para evitar exceso de tareas abiertas." },
-      { letter: "C", text: "Obliga siempre a trabajar en sprints de duración fija." },
-      { letter: "D", text: "Elimina la necesidad de definir prioridades o políticas de trabajo." }
+    "id": 11,
+    "unit": "Unidad 2",
+    "title": "MVP",
+    "statement": "¿Cuál de las siguientes opciones describe mejor el propósito de un MVP (Minimum Viable Product)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Construir desde el inicio todas las funcionalidades imaginadas para evitar tener que iterar después."
+      },
+      {
+        "letter": "B",
+        "text": "Implementar el menor alcance suficiente para validar valor e hipótesis relevantes, aprender y decidir próximos pasos."
+      },
+      {
+        "letter": "C",
+        "text": "Crear únicamente una pieza visual sin usuarios reales ni posibilidad de obtener aprendizaje sobre la propuesta."
+      },
+      {
+        "letter": "D",
+        "text": "Elegir siempre la solución técnicamente más barata, aunque no permita validar ninguna hipótesis del producto."
+      }
     ]
   },
   {
-    id: 12, unit: "Unidad 2", title: "WIP (Work In Progress)",
-    statement: "Sobre el concepto de WIP (Work In Progress), seleccioná la o las afirmaciones correctas.",
-    options: [
-      { letter: "A", text: "WIP refiere al trabajo en progreso, es decir, las tareas que están siendo ejecutadas simultáneamente." },
-      { letter: "B", text: "Limitar el WIP puede ayudar a evitar sobrecarga y dispersión del equipo." },
-      { letter: "C", text: "Un WIP ilimitado siempre mejora la productividad porque permite abrir muchas tareas al mismo tiempo." },
-      { letter: "D", text: "Limitar el WIP no ayuda a observar cuellos de botella en el flujo de trabajo." }
+    "id": 12,
+    "unit": "Unidad 2",
+    "title": "Decisiones tecnológicas",
+    "statement": "Sobre las decisiones tecnológicas de un proyecto, seleccioná la o las afirmaciones correctas.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "La elección tecnológica debería considerar el problema, el contexto, las capacidades del equipo, costos, mantenimiento y necesidades del producto."
+      },
+      {
+        "letter": "B",
+        "text": "La tecnología más nueva del mercado es siempre la mejor elección, incluso si agrega riesgo y el equipo no tiene experiencia con ella."
+      },
+      {
+        "letter": "C",
+        "text": "Una decisión tecnológica puede afectar rendimiento, costos, mantenibilidad y también la experiencia de usuario."
+      },
+      {
+        "letter": "D",
+        "text": "Las decisiones de arquitectura no pueden influir en la experiencia de usuario porque pertenecen exclusivamente al backend."
+      }
     ]
   },
   {
-    id: 13, unit: "Unidad 3", title: "Evolución de CLI a GUI",
-    statement: "Seleccioná la o las afirmaciones correctas sobre la evolución de las interfaces desde CLI (Command Line Interface) hacia GUI (Graphical User Interface).",
-    options: [
-      { letter: "A", text: "Las interfaces de línea de comando requieren conocer instrucciones específicas para operar el sistema." },
-      { letter: "B", text: "Las interfaces gráficas facilitaron el uso mediante ventanas, íconos, menús y punteros." },
-      { letter: "C", text: "Las interfaces de línea de comando se basan principalmente en gestos táctiles." },
-      { letter: "D", text: "Las GUI eliminan por completo la necesidad de aprender a usar un sistema." }
+    "id": 13,
+    "unit": "Unidad 2",
+    "title": "Roadmap y gestión de riesgos",
+    "statement": "Sobre roadmap y gestión de riesgos, seleccioná la o las afirmaciones correctas.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Un roadmap útil debe permanecer inmutable aunque cambien las prioridades, la evidencia o el contexto del producto."
+      },
+      {
+        "letter": "B",
+        "text": "Un roadmap puede comunicar dirección y prioridades y, al mismo tiempo, adaptarse cuando aparece nueva información."
+      },
+      {
+        "letter": "C",
+        "text": "Un riesgo solo debe gestionarse una vez que el problema ya ocurrió."
+      },
+      {
+        "letter": "D",
+        "text": "Gestionar riesgos incluye identificarlos, estimar probabilidad e impacto y definir acciones de mitigación o contingencia."
+      }
     ]
   },
   {
-    id: 14, unit: "Unidad 3", title: "Interfaz de línea de comando",
-    statement: "¿Cuál de las siguientes afirmaciones describe mejor a una interfaz de línea de comando (CLI)?",
-    options: [
-      { letter: "A", text: "Una interfaz basada en instrucciones escritas que el usuario debe conocer o aprender para operar el sistema." },
-      { letter: "B", text: "Una interfaz basada exclusivamente en gestos táctiles." },
-      { letter: "C", text: "Una interfaz compuesta únicamente por botones, tarjetas y menús visuales." },
-      { letter: "D", text: "Una interfaz que no requiere aprendizaje ni precisión por parte del usuario." }
+    "id": 14,
+    "unit": "Unidad 3",
+    "title": "CLI y GUI",
+    "statement": "¿Cuál de las siguientes afirmaciones sobre CLI y GUI es correcta?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Una CLI puede requerir conocer comandos, pero para ciertos usuarios y tareas puede ser eficiente y facilitar automatización."
+      },
+      {
+        "letter": "B",
+        "text": "Una GUI es siempre más rápida que una CLI para cualquier usuario, tarea y contexto."
+      },
+      {
+        "letter": "C",
+        "text": "Una CLI no requiere aprender sintaxis ni recordar comandos."
+      },
+      {
+        "letter": "D",
+        "text": "El uso de una GUI elimina por completo la posibilidad de errores de interacción."
+      }
     ]
   },
   {
-    id: 15, unit: "Unidad 3", title: "GUI y prototipado en Figma",
-    statement: "Sobre las interfaces gráficas (GUI) y el uso de Figma como herramienta de diseño y prototipado, seleccioná la o las afirmaciones correctas.",
-    options: [
-      { letter: "A", text: "Figma permite diseñar pantallas, wireframes y flujos de navegación sin necesidad de programar." },
-      { letter: "B", text: "Figma habilita la colaboración en tiempo real entre equipos de UX, UI, producto y negocio." },
-      { letter: "C", text: "Figma es exclusivamente una herramienta para programadores backend." },
-      { letter: "D", text: "Figma solo sirve para crear prototipos de baja fidelidad y no permite simular navegación." }
+    "id": 15,
+    "unit": "Unidad 3",
+    "title": "Interfaces táctiles",
+    "statement": "Sobre diseño de interfaces táctiles, seleccioná la o las afirmaciones correctas.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Tamaño y separación adecuados de los controles pueden reducir toques accidentales y mejorar la precisión."
+      },
+      {
+        "letter": "B",
+        "text": "Los gestos invisibles sin pistas, alternativas ni feedback siempre mejoran la discoverability de una interfaz."
+      },
+      {
+        "letter": "C",
+        "text": "El feedback visual, sonoro o háptico puede reforzar la percepción de que una acción táctil fue reconocida."
+      },
+      {
+        "letter": "D",
+        "text": "La ergonomía y el alcance con una mano no son relevantes en el diseño de interfaces móviles."
+      }
     ]
   },
   {
-    id: 16, unit: "Unidad 3", title: "Niveles de diseño emocional",
-    statement: "Sobre los niveles de diseño emocional propuestos por Donald Norman (visceral, conductual y reflexivo), seleccioná la o las afirmaciones correctas.",
-    options: [
-      { letter: "A", text: "El nivel visceral se relaciona con el impacto inmediato a nivel visual: color, forma, movimiento." },
-      { letter: "B", text: "El nivel conductual se vincula con cómo se siente usar el producto: fluidez, facilidad y control." },
-      { letter: "C", text: "El nivel reflexivo opera únicamente en interfaces físicas, no en productos digitales." },
-      { letter: "D", text: "Los tres niveles están relacionados solamente con el rendimiento técnico del sistema." }
+    "id": 16,
+    "unit": "Unidad 3",
+    "title": "Interfaces conversacionales",
+    "statement": "Sobre interfaces conversacionales y por voz, seleccioná la o las afirmaciones correctas.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Deben contemplar ambigüedades, errores de interpretación y formas de recuperación cuando la intención no queda clara."
+      },
+      {
+        "letter": "B",
+        "text": "En acciones sensibles, una confirmación puede ayudar a evitar consecuencias no deseadas."
+      },
+      {
+        "letter": "C",
+        "text": "No necesitan mantener contexto porque cada mensaje puede interpretarse correctamente de manera aislada."
+      },
+      {
+        "letter": "D",
+        "text": "Pueden combinar conversación con botones, listas u otros apoyos visuales cuando eso mejora claridad y control."
+      }
     ]
   },
   {
-    id: 17, unit: "Unidad 3", title: "Interfaces táctiles",
-    statement: "¿Cuáles de las siguientes son consideraciones correctas para diseñar interfaces táctiles efectivas?",
-    options: [
-      { letter: "A", text: "Los elementos interactivos deben tener un tamaño y separación adecuados para la precisión del dedo." },
-      { letter: "B", text: "Los gestos invisibles, sin guía visual ni feedback, suelen mejorar la experiencia." },
-      { letter: "C", text: "El feedback háptico (vibración) puede reforzar la percepción de la acción realizada." },
-      { letter: "D", text: "La ergonomía del uso móvil con una sola mano no es relevante en el diseño táctil." }
+    "id": 17,
+    "unit": "Unidad 3",
+    "title": "Figma y prototipado",
+    "statement": "Sobre Figma y el prototipado, seleccioná la o las afirmaciones correctas.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Figma puede utilizarse para diseñar pantallas y construir prototipos navegables."
+      },
+      {
+        "letter": "B",
+        "text": "Un prototipo de Figma reemplaza por completo la implementación productiva de frontend y backend."
+      },
+      {
+        "letter": "C",
+        "text": "Figma facilita colaboración y revisión entre perfiles de diseño, producto, negocio y desarrollo."
+      },
+      {
+        "letter": "D",
+        "text": "Un prototipo puede servir para probar flujos e hipótesis de interacción antes de desarrollar la solución final."
+      }
     ]
   },
   {
-    id: 18, unit: "Unidad 3", title: "Interfaces por voz y conversacionales",
-    statement: "Sobre interfaces por voz y conversacionales, seleccioná la o las opciones correctas.",
-    options: [
-      { letter: "A", text: "Pueden permitir que el usuario interactúe mediante lenguaje natural." },
-      { letter: "B", text: "Siempre interpretan correctamente la intención del usuario." },
-      { letter: "C", text: "No requieren diseño específico porque el usuario simplemente conversa." },
-      { letter: "D", text: "Eliminan por completo los riesgos de ambigüedad o mala interpretación." }
+    "id": 18,
+    "unit": "Unidad 3",
+    "title": "Diseño emocional",
+    "statement": "Sobre los niveles de diseño emocional propuestos por Donald Norman, seleccioná la o las afirmaciones correctas.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "El nivel visceral se relaciona principalmente con el significado personal, la identidad y el recuerdo construido a largo plazo."
+      },
+      {
+        "letter": "B",
+        "text": "El nivel conductual se vincula con el uso, el desempeño, la fluidez y la sensación de control durante la interacción."
+      },
+      {
+        "letter": "C",
+        "text": "El nivel reflexivo se relaciona con significado, identidad, interpretación y recuerdo asociado al producto."
+      },
+      {
+        "letter": "D",
+        "text": "El diseño emocional se limita a elegir colores atractivos y no guarda relación con la experiencia de uso."
+      }
     ]
   },
   {
-    id: 19, unit: "Unidad 3", title: "Accesibilidad",
-    statement: "¿Cuáles de las siguientes decisiones mejoran la accesibilidad de una interfaz?",
-    options: [
-      { letter: "A", text: "Usar buen contraste entre texto y fondo." },
-      { letter: "B", text: "Comunicar errores únicamente con color rojo, sin texto ni íconos complementarios." },
-      { letter: "C", text: "Usar textos claros, legibles y comprensibles." },
-      { letter: "D", text: "Usar textos muy pequeños para mostrar más información en pantalla." }
+    "id": 19,
+    "unit": "Unidad 3",
+    "title": "Accesibilidad",
+    "statement": "¿Cuáles de las siguientes decisiones favorecen la accesibilidad de una interfaz?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Mantener contraste suficiente y asociar etiquetas comprensibles a controles e información relevante."
+      },
+      {
+        "letter": "B",
+        "text": "Comunicar errores únicamente mediante un cambio de color, sin texto, ícono ni otra señal complementaria."
+      },
+      {
+        "letter": "C",
+        "text": "Permitir navegación operable y usar estructura semántica que pueda ser interpretada por tecnologías de asistencia."
+      },
+      {
+        "letter": "D",
+        "text": "Reducir el tamaño del texto al mínimo posible para mostrar más contenido, aunque disminuya su legibilidad."
+      }
     ]
   },
   {
-    id: 20, unit: "Unidad 3", title: "Ética y dark patterns",
-    statement: "Sobre la dimensión ética del diseño de interfaces, seleccioná la o las afirmaciones correctas.",
-    options: [
-      { letter: "A", text: "Los dark patterns son decisiones de diseño que manipulan al usuario en favor del negocio, en perjuicio de su autonomía." },
-      { letter: "B", text: "Hacer difícil la cancelación de una suscripción puede ser considerado un dark pattern." },
-      { letter: "C", text: "Los dark patterns mejoran la confianza a largo plazo entre el usuario y el producto." },
-      { letter: "D", text: "La ética del diseño solo es relevante en productos para sectores regulados como salud o finanzas." }
+    "id": 20,
+    "unit": "Unidad 3",
+    "title": "Ética, autonomía y consentimiento",
+    "statement": "Sobre ética, autonomía y consentimiento en diseño de interacción, seleccioná la o las afirmaciones correctas.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "El consentimiento informado requiere que la persona comprenda qué acepta y, cuando corresponda, pueda cambiar o retirar esa decisión."
+      },
+      {
+        "letter": "B",
+        "text": "La transparencia sobre costos, uso de datos y consecuencias de una acción favorece decisiones más autónomas."
+      },
+      {
+        "letter": "C",
+        "text": "Ocultar cargos hasta el último paso es aceptable si mejora la tasa de conversión del negocio."
+      },
+      {
+        "letter": "D",
+        "text": "Forzar opciones predeterminadas difíciles de revertir es una práctica ética siempre que incremente métricas comerciales."
+      }
     ]
   }
 ];
 
 const EXERCISES = [
   {
-    id: 1,
-    title: "Análisis de usabilidad de una interfaz",
-    contextHtml: `
-      <p>Una universidad lanza una aplicación para que los alumnos consulten materias, horarios, notas y avisos importantes.</p>
-      <p>Al ingresar, el alumno encuentra la siguiente situación:</p>
-      <ul>
-        <li>La pantalla principal muestra 12 botones del mismo tamaño.</li>
-        <li>No queda claro cuál botón corresponde a "Notas" y cuál a "Estado académico".</li>
-        <li>Cuando el usuario toca "Inscripción a materias", el sistema tarda varios segundos pero no muestra ningún indicador de carga.</li>
-        <li>Si ocurre un error, aparece el mensaje: "Error 504".</li>
-        <li>Algunos textos están en gris claro sobre fondo blanco.</li>
-        <li>Para volver a la pantalla anterior, a veces hay una flecha, a veces un botón "Volver" y a veces no hay ninguna opción visible.</li>
-      </ul>
-    `,
-    consignaHtml: `
-      <p><strong>Consigna:</strong> Analizá la situación anterior e identificá <strong>al menos cinco problemas</strong> de usabilidad o interacción. Para cada problema, indicá:</p>
-      <ol>
-        <li>Qué problema detectás.</li>
-        <li>Qué principio, heurística o concepto se relaciona (cuando corresponda, asociar con una heurística específica de Nielsen).</li>
-        <li>Qué mejora concreta propondrías.</li>
-      </ol>
-    `,
-    placeholder: "1) Problema: ...\n   Concepto / heurística: ...\n   Mejora propuesta: ...\n\n2) Problema: ...\n   ..."
+    "id": 1,
+    "title": "Auditoría de interacción, accesibilidad y ética",
+    "contextHtml": "<p>Una plataforma de inscripción universitaria fue rediseñada para celulares. Durante una prueba aparecen estas situaciones:</p><ul><li>El botón principal cambia de nombre entre “Inscribirme”, “Confirmar” y “Aceptar”.</li><li>Al enviar una inscripción el sistema tarda varios segundos sin indicar estado.</li><li>Los errores se muestran solo con borde rojo, sin texto explicativo.</li><li>Algunos controles táctiles son pequeños y están muy juntos.</li><li>Una casilla de comunicaciones comerciales aparece marcada por defecto y la opción para desactivarla está escondida.</li><li>La acción de eliminar una inscripción se ejecuta inmediatamente y no permite deshacer.</li></ul>",
+    "consignaHtml": "<p><strong>Consigna:</strong> Identificá <strong>al menos cinco problemas</strong> y, para cada uno:</p><ol><li>Explicá qué problema de interacción detectás.</li><li>Relacioná el problema con un concepto visto en la materia (usabilidad, consistencia, feedback, prevención de errores, accesibilidad, ética/autonomía u otro pertinente).</li><li>Proponé una mejora concreta y justificá por qué sería mejor para el usuario.</li></ol>",
+    "placeholder": "1) Problema: ...\n   Concepto: ...\n   Mejora: ...\n\n2) Problema: ...\n   Concepto: ...\n   Mejora: ..."
   },
   {
-    id: 2,
-    title: "Gestión de proyecto e interfaz",
-    contextHtml: `
-      <p>Un equipo de estudiantes debe desarrollar el prototipo de una app para reservar turnos en un centro médico. El equipo trabaja con un tablero digital, pero tiene los siguientes problemas:</p>
-      <ul>
-        <li>Hay 25 tareas abiertas al mismo tiempo en la columna "En curso".</li>
-        <li>Nadie sabe qué tarea es prioritaria.</li>
-        <li>Algunas tareas no tienen responsable.</li>
-        <li>Se diseñaron pantallas en Figma, pero nunca se probaron con usuarios.</li>
-        <li>El prototipo tiene botones con nombres distintos para la misma acción: "Reservar", "Confirmar", "Aceptar turno".</li>
-        <li>El equipo quiere agregar muchas funciones antes de validar el flujo principal.</li>
-      </ul>
-    `,
-    consignaHtml: `
-      <p><strong>Consigna:</strong> Proponé una mejora integral del proyecto considerando las siguientes dimensiones:</p>
-      <ol>
-        <li>Gestión del trabajo.</li>
-        <li>Uso de Kanban o tablero digital.</li>
-        <li>WIP (Work In Progress).</li>
-        <li>Diseño centrado en el usuario.</li>
-        <li>Consistencia de interfaz.</li>
-        <li>Validación del MVP (Minimum Viable Product).</li>
-      </ol>
-    `,
-    placeholder: "1) Gestión del trabajo: ...\n\n2) Uso de Kanban: ...\n\n3) WIP: ...\n\n4) Diseño centrado en el usuario: ...\n\n5) Consistencia de interfaz: ...\n\n6) Validación del MVP: ..."
+    "id": 2,
+    "title": "Estrategia de producto, trabajo y validación",
+    "contextHtml": "<p>Una organización quiere lanzar en tres meses una app para gestionar turnos. Tiene un equipo de producto y desarrollo, pero enfrenta estos problemas:</p><ul><li>Hay muchas tareas abiertas simultáneamente y nadie visualiza los cuellos de botella.</li><li>Se pretende incluir todas las funcionalidades antes de mostrar el producto a usuarios.</li><li>El roadmap se trata como una lista de fechas inamovibles.</li><li>El equipo propone adoptar una tecnología nueva solo porque está de moda.</li><li>Existen prototipos en Figma, pero todavía no fueron probados.</li><li>No se registraron riesgos ni acciones de mitigación.</li></ul>",
+    "consignaHtml": "<p><strong>Consigna:</strong> Proponé una forma de organizar y validar el trabajo. Tu respuesta debe incluir:</p><ol><li>Qué enfoque de trabajo usarías y por qué (por ejemplo Scrum, Kanban u otro de los vistos).</li><li>Cómo manejarías WIP y prioridades.</li><li>Qué definirías como MVP y qué hipótesis intentarías validar primero.</li><li>Cómo usarías Figma o prototipos con usuarios antes de desarrollar todo.</li><li>Cómo tratarías roadmap y riesgos.</li><li>Qué criterios usarías para decidir la tecnología.</li></ol>",
+    "placeholder": "1) Enfoque de trabajo: ...\n\n2) WIP y prioridades: ...\n\n3) MVP e hipótesis: ...\n\n4) Validación con prototipos: ...\n\n5) Roadmap y riesgos: ...\n\n6) Decisión tecnológica: ..."
   }
 ];
 
@@ -630,8 +861,8 @@ function shuffleSeeded(arr, seed) {
 // STATE
 // ============================================================
 
-const STORAGE_KEY = "parcial_fundamentos_2026_state";
-const SUBMITTED_KEY = "parcial_fundamentos_2026_submitted";
+const STORAGE_KEY = "parcial_hci_2026_09_29_state";
+const SUBMITTED_KEY = "parcial_hci_2026_09_29_submitted";
 
 let state = {
   studentName: null,
